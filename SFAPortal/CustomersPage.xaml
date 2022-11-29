@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SFAPortal.CustomersPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+            <StackLayout Grid.Row="0">
+        
+            <Grid Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="LOGIN AS:" 
+                           Grid.Row="0" 
+                           Grid.Column="0" 
+                           FontSize="Medium" 
+                           TextColor="Black"
+                           VerticalOptions="Center"
+                           Margin="10, 0, 10, 0"/>
+                    <Button Text="Main Menu" 
+                            Grid.Row="0" 
+                            FontSize="Medium"
+                            Grid.Column="1" 
+                            BackgroundColor="Transparent" 
+                            HorizontalOptions="End" 
+                            Clicked="mainMenu_Clicked"/>
+                </Grid>
+
+                <Label Text="Customers" FontSize="Title" HorizontalOptions="Center" Margin="0, -20, 0, 0"/>
+
+                <Frame OutlineColor="SeaShell" WidthRequest="300" Margin="10, 0, 10, 0" Padding="5, 0, 0, 0">
+                    <Grid Padding="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".1*" />
+                            <RowDefinition Height=".2*" />
+                            <RowDefinition Height=".1*" />
+                            <RowDefinition Height=".1*" />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".4*" />
+                            <ColumnDefinition Width="*" />
+                   
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Name:" 
+                               FontSize="Medium"
+                               Grid.Row="0" 
+                               Grid.Column="0" 
+                               VerticalOptions="Center"/>
+                        <Editor x:Name="cusName"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Placeholder="Ex : HIB Gunathunga" />
+
+                        <Label Text="Address:" 
+                               FontSize="Medium"
+                               Grid.Row="1" 
+                               Grid.Column="0" />
+                        <StackLayout Grid.Row="1" Grid.Column="1">
+                            <Editor x:Name="cusAddress"
+                                    Placeholder="Ex: No 59"/>
+                            <Editor x:Name="cusAddressStrrt"
+                                    Placeholder="Ex: Panvilathenna, Gampola"/>
+                        </StackLayout>
+
+                        <Label Text="Contact No:" 
+                               FontSize="Medium"
+                               Grid.Row="2" 
+                               VerticalOptions="Center"
+                               Grid.Column="0" />
+                        <Editor x:Name="cusMobileNo"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Placeholder="Ex : 0785884231" />
+                
+                        <Label Text="E-mail:" 
+                               FontSize="Medium"
+                               Grid.Row="3" 
+                               VerticalOptions="Center"
+                               Grid.Column="0" />
+                        <Editor x:Name="cusEmail"
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                Placeholder="Ex :isuru.bandara0306@gmail.com" />
+                    </Grid>
+
+
+                </Frame>
+
+                <Button Text="Save"
+                        x:Name="mainMenu"
+                        HorizontalOptions="Center" 
+                        WidthRequest="200"
+                        BackgroundColor="Green"
+                        TextColor="White"/>
+
+
+                <Frame Padding="0" Margin="2, 0, 2, 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Name" Grid.Column="0" HorizontalTextAlignment="Center" BackgroundColor="Aqua"/>
+                    <Label Text="Town" Grid.Column="1" HorizontalTextAlignment="Center" BackgroundColor="Aqua"/>
+                    <Label Text="Contact No" Grid.Column="2" HorizontalTextAlignment="Center" BackgroundColor="Aqua"/>
+                    <Label Text="E-mail" Grid.Column="3" HorizontalTextAlignment="Center" BackgroundColor="Aqua"/>
+
+                        <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                        <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                        <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                        <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+
+                    </Grid>
+                </Frame>
+
+        </StackLayout> 
+        <StackLayout Grid.Row="1" Padding="0">
+            <ListView x:Name="customersList" ItemsSource="{Binding Customers}" SeparatorVisibility="None" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="0">
+                                <Grid  RowSpacing="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Margin="2, 0, 10, 0" Text="{Binding Name }" VerticalOptions="Start" Grid.Column="0"/>
+                                    <Label Margin="0, 0, 10, 0" Text="{Binding Town }" VerticalOptions="Start" Grid.Column="1"/>
+                                    <Label Margin="0, 0, 10, 0" Text="{Binding ContactNo }" VerticalOptions="Start" Grid.Column="2"/>
+                                    <Label Margin="0, 0, 10, 0" Text="{Binding Email }" VerticalOptions="Start" Grid.Column="3"/>
+
+                                    <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                    <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                    <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                    <BoxView BackgroundColor="Black" WidthRequest="1" Grid.Column="3" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>     
+        
+        
+        
+    </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SFAPortal.Attendance">
+    
+    <StackLayout>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="LOGIN AS:" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   FontSize="Medium" 
+                   TextColor="Black"
+                   Margin="10, 12, 0, 0"/>
+            <Button Text="Main Menu" 
+                    Grid.Row="0" 
+                    FontSize="Medium"
+                    Grid.Column="1" 
+                    BackgroundColor="Transparent" 
+                    HorizontalOptions="End" 
+                    Clicked="mainMenu_Clicked"/>
+        </Grid>
+
+        <Label Text="Attendance" FontSize="Title" HorizontalOptions="Center" />
+
+        <Frame OutlineColor="SeaShell" WidthRequest="300" Margin="10" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+           
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width=".6*" />
+                    <ColumnDefinition Width=".7*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Check in Time" 
+                       Grid.Row="0" 
+                       VerticalOptions="Center"
+                       Grid.Column="0"
+                       FontSize="Medium"/>
+                <TimePicker x:Name="checkInTime"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        />
+                <DatePicker x:Name="datePicker"
+                            Grid.Row="0"
+                            Grid.Column="2" />
+                
+
+                <Label Text="Check out Time" 
+                       Grid.Row="1" 
+                       VerticalOptions="Center"
+                       Grid.Column="0"
+                       FontSize="Medium"/>
+                <TimePicker x:Name="checkOutTime"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        />
+                <DatePicker x:Name="dateOutPicker"
+                            Grid.Row="1"
+                            Grid.Column="2" />
+
+                
+                
+                <Label Text="Shift Type" 
+                       Grid.Row="2" 
+                       VerticalOptions="Center"
+                       Grid.Column="0"
+                       FontSize="Medium"/>
+                <Picker x:Name="shiftType"
+                        VerticalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Title="Select Shift Type" 
+                        Grid.ColumnSpan="2"
+                        HorizontalTextAlignment="Center"
+                        />
+
+
+            </Grid>
+            
+            
+        </Frame>
+
+        <Button Text="Check In"
+                x:Name="mainMenu"
+                HorizontalOptions="Center" 
+                WidthRequest="200"
+                BackgroundColor="Green"
+                TextColor="White"
+                />
+
+
+    </StackLayout>
+    
+    
+</ContentPage>

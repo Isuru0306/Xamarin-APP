@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SFAPortal.Home">
+
+    <StackLayout>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Login as:" Grid.Row="0" Grid.Column="0" FontSize="Medium" Margin="20, 12, 0, 0"/>
+            <Button Text="logout" Grid.Row="0" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="End" />
+        </Grid>
+
+        <Label Text="ANZ Company Ltd" FontSize="Title" HorizontalOptions="Center" />
+
+        <Frame OutlineColor="SeaShell" WidthRequest="300" Margin="10" HorizontalOptions="Center"  >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0" WidthRequest="50" HeightRequest="50" >
+                    <ImageButton Source="attendance"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="10, 0, 0, 0" 
+                                 x:Name="attendance"
+                                 Clicked="attendance_Clicked"
+                                 />
+                    
+                    <Label Text="Attenance" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="1" WidthRequest="50" HeightRequest="50" >
+                    <ImageButton Source="dailytasks"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="0, 0, 0, 0"
+                                 x:Name="dailytask"
+                                 Clicked="dailytask_Clicked"
+                                 />
+                    <Label Text="Task Schedule" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" WidthRequest="50" HeightRequest="50" >
+                    <ImageButton Source="user"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="0, 0, 0, 0"
+                                 x:Name="user"
+                                 Clicked="user_Clicked"
+                                 />
+                    <Label Text="Customer" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" WidthRequest="50" HeightRequest="50" >
+                    <ImageButton Source="shoppinglist"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="10, 0, 0, 0"
+                                 x:Name="pricelist"
+                                 Clicked="pricelist_Clicked"
+                                 />
+                    <Label Text="Price List" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" WidthRequest="50" HeightRequest="50" >
+                    <ImageButton Source="test"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="0, 0, 0, 0"
+                                 x:Name="salesOrder"
+                                 Clicked="salesOrder_Clicked"
+                                 />
+                    <Label Text="Sales Order" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="1" WidthRequest="50" HeightRequest="50" >
+                    <ImageButton Source="collection"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="0, 0, 0, 0"
+                                 x:Name="collections"
+                                 Clicked="collections_Clicked"
+                                 />
+                    <Label Text="Collections" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Grid.Column="0" WidthRequest="50" HeightRequest="60" >
+                    <ImageButton Source="info"
+                                 WidthRequest="50" 
+                                 HeightRequest="50" 
+                                 BackgroundColor="Transparent" 
+                                 Margin="0, 0, 0, 0"
+                                 x:Name="info"
+                                 Clicked="info_Clicked"
+                                 />
+                    <Label Text="Info" HorizontalOptions="Center"/>
+                </StackLayout>
+               
+            </Grid>
+        </Frame>
+
+
+    </StackLayout>
+    
+</ContentPage>

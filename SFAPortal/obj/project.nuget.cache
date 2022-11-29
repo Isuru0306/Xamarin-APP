@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "5D2wk9Bp4Dg9dEqpDC092pTy4MD2pzauBzrBZMCAQVjiqUlzRJVxTNv2VtaQJhU3+Ah2JGiiR1h3ASMydf0lRA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Isuru\\source\\repos\\SFAPortal\\SFAPortal\\SFAPortal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Isuru\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Isuru\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Isuru\\.nuget\\packages\\syncfusion.licensing\\20.3.0.58\\syncfusion.licensing.20.3.0.58.nupkg.sha512",
+    "C:\\Users\\Isuru\\.nuget\\packages\\syncfusion.xamarin.core\\20.3.0.58\\syncfusion.xamarin.core.20.3.0.58.nupkg.sha512",
+    "C:\\Users\\Isuru\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}

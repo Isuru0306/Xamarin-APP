@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SFAPortal.MainPage">
+
+
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="Center" Margin="0, 40, 0, 0">
+            <Label Text="SFA Portal" FontSize="50" />
+        </StackLayout>
+
+        <Frame OutlineColor="SeaShell" WidthRequest="290" Margin="10" HorizontalOptions="Center" >
+            <StackLayout>
+                <Editor Placeholder="User ID" x:Name="userId"/>
+                <Entry  Grid.Row="3" IsPassword="True" Placeholder="Password" x:Name="userPassword"/>
+                <Picker x:Name="companyList" Title="Select a Company" />
+            </StackLayout>
+        </Frame>
+
+        <Grid Margin="33, 10, 33, 10" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="Login" Grid.Row="0" Grid.Column="0" BackgroundColor="Green" Margin="5" Clicked="Button_Clicked_1"/>
+            <Button Text="Exit" Grid.Row="0" Grid.Column="1" BackgroundColor="Red" Margin="5" Clicked="Button_Clicked"/>
+        </Grid>
+
+        <Image Source="automatin_world"/>
+
+    </StackLayout>
+
+</ContentPage>
