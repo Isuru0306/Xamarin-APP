@@ -8,20 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("SFAPortal.PriceList.xaml", "PriceList.xaml", typeof(global::SFAPortal.PriceList))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("SFAPortal.CollectionList.xaml", "CollectionList.xaml", typeof(global::SFAPortal.Collection))]
 
 namespace SFAPortal {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("PriceList.xaml")]
-    public partial class PriceList : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("CollectionList.xaml")]
+    public partial class Collection : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ListView priceList;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PriceList));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Collection));
             priceList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "priceList");
         }
     }

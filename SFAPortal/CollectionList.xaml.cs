@@ -1,5 +1,4 @@
-﻿using SFAPortal.Model;
-using SFAPortal.ViewModel;
+﻿using SFAPortal.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace SFAPortal
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PriceList : ContentPage
+    public partial class Collection : ContentPage
     {
-
-        List<PriceLists> PriceLists = new List<PriceLists>();
-        public PriceList()
+        public Collection()
         {
             InitializeComponent();
-            this.BindingContext = new PriceListViewModel();
+            this.BindingContext = new CollectionListViewModel();
         }
 
         private void mainMenu_Clicked(object sender, EventArgs e)

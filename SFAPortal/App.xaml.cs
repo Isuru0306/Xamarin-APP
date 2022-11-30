@@ -10,7 +10,7 @@ namespace SFAPortal
         {
             InitializeComponent();
 
-            MainPage = new TaskSchedule();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

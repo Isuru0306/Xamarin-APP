@@ -18,3 +18,4 @@ C:\Users\Isuru\source\repos\SFAPortal\SFAPortal\obj\Debug\netstandard2.0\SFAPort
 C:\Users\Isuru\source\repos\SFAPortal\SFAPortal\obj\Debug\netstandard2.0\ref\SFAPortal.dll
 C:\Users\Isuru\source\repos\SFAPortal\SFAPortal\obj\Debug\netstandard2.0\SFAPortal.pdb
 C:\Users\Isuru\source\repos\SFAPortal\SFAPortal\obj\Debug\netstandard2.0\PriceList.xaml.g.cs
+C:\Users\Isuru\source\repos\SFAPortal\SFAPortal\obj\Debug\netstandard2.0\CollectionList.xaml.g.cs

@@ -39,17 +39,18 @@ namespace SFAPortal
 
         private void salesOrder_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new PriceList());
         }
 
         private void collections_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushModalAsync(new Collection());
 
         }
 
         private void info_Clicked(object sender, EventArgs e)
         {
-
+            DisplayAlert("Alert", "Not complete", "OK");
         }
     }
 }
